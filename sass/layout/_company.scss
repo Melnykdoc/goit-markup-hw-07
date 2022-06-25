@@ -1,0 +1,22 @@
+.company {
+    display: flex;
+    justify-content: space-around;
+}
+.company__link {
+    align-items: center;
+    display: flex;
+    @include size(170px, 92px, 4px);
+    border: 1px solid #afb1b8;
+    margin-left: auto;
+    &:hover {
+        border: 1px solid var(--accent-color);
+    }
+}
+.company__icon {
+    @include transition(fill);
+    margin: 0 auto;
+    fill: var(--icon-color);
+    .company__link:hover & {
+        fill: var(--accent-color);
+    }
+}
