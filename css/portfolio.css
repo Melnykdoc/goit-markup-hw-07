@@ -66,14 +66,35 @@ body {
 }
 
 .container {
-  width: 1230px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .hidden-title {
@@ -355,6 +376,10 @@ body {
   transform: translateX(0);
 }
 
+.flex {
+  text-align: center;
+}
+
 .footer {
   background-color: var(--background-footer);
   padding-top: 60px;
@@ -364,9 +389,11 @@ body {
 .address__list {
   color: var(--contacts-color);
   margin-top: 20px;
+  margin-bottom: 60px;
 }
+
 .address__list .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .address__accent {
@@ -386,17 +413,20 @@ body {
 }
 
 .footer__join {
-  align-items: baseline;
-  display: flex;
+  display: block;
 }
 
 .join {
-  margin-left: 70px;
-  margin-right: 93px;
+  text-align: center;
 }
 .join__title {
   margin-bottom: 20px;
   color: var(--title-color);
+}
+
+.join__list.social {
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
 .join__link {
@@ -416,16 +446,17 @@ body {
 }
 
 .form {
-  display: flex;
+  display: block;
 }
 
 .subs__title {
   margin-bottom: 20px;
   color: var(--title-color);
+  text-align: center;
 }
 
 .form__mail {
-  width: 358px;
+  width: 450px;
   height: 50px;
   border-radius: 4px;
   font-size: 18px;
@@ -445,9 +476,12 @@ body {
 }
 
 .form__btn {
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 20px;
   padding-left: 29px;
   width: 200px;
   height: 50px;
